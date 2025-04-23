@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blue Mind</title>
+    <title>CodeSpark</title>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -15,133 +15,274 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="./style.css" />
-  </head>
+  
   <body>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="/" alt="Company Logo" />
-      </div>
-
-      <button
-        class="mobile-menu-toggle"
-        aria-label="Toggle menu"
-        aria-expanded="false"
-      >
-        <img class="menubar" src="./main-menu.png" alt="menu bar" />
-      </button>
-
-      <ul class="nav-links" id="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-
-    <!-- Hero Section -->
-    <header class="hero">
-      <div class="hero-content">
-        <h1>Blue Mind</h1>
-        <p>
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Recusandae,
-          blanditiis nam soluta laborum, facere in, et quia sequi consequatur
-          perferendis cum. Cupiditate eos praesentium, officiis sequi
-          accusantium placeat quibusdam corporis explicabo nisi. Delectus
-          expedita nemo dicta, eligendi culpa aut modi inventore eos ea
-          repudiandae aperiam quos fugit distinctio eaque dolore.
-        </p>
-        <a href="contact.html" class="cta-button">Get Started</a>
-      </div>
-      <div class="hero-image">
-        <div
-          id="carouselExampleFade"
-          class="carousel slide carousel-fade"
-          data-bs-ride="carousel"
-        >
-          <div class="carousel-inner">
-            <div class="carousel-item active">
-              <img src="./nat1.jpg" class="d-block w-100" alt="it_solution" />
-            </div>
-            <div class="carousel-item">
-              <img src="./nat2.jpg" class="d-block w-100" alt="it_solution" />
-            </div>
-            <div class="carousel-item">
-              <img src="./nat3.jpg" class="d-block w-100" alt="it_solution" />
-            </div>
-          </div>
-          <button
-            class="carousel-control-prev"
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="prev"
-          >
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-          </button>
-          <button
-            class="carousel-control-next"
-            type="button"
-            data-bs-target="#carouselExampleFade"
-            data-bs-slide="next"
-          >
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-          </button>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo-space">
+          <img class="logo" src="/logo-removebg.png" alt="Company Logo" />
+          <img
+            class="slogan"
+            src="./sloganfinal-removebg-preview.png"
+            alt="slogan"
+          />
         </div>
-      </div>
+    
+
+        <button
+          class="mobile-menu-toggle"
+          aria-label="Toggle menu"
+          aria-expanded="false"
+        >
+          <img class="menubar" src="./main-menu.png" alt="menu bar" />
+        </button>
+      
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
     </header>
+    <!-- Hero Section -->
+    <hr />
+   
+      <div class="banner">
+        <h1 class="banner-heading">
+          Empower Your Business with Smarter Software
+        </h1>
+        <p class="banner-content">
+          All-in-one platform to streamline your workflow, boost productivity,
+          and deliver exceptional results — without the chaos.
+        </p>
+        <a href="/" class="banner-btn">Learn More</a>
+      </div>
+   
 
     <!-- Services Preview -->
-    <section class="services-preview">
-      <h2>Our Services</h2>
-      <div class="services-grid">
-        <div class="service-card">
-          <img src="/mobile-app-development.webp" alt="Web Development" />
-          <h3>Web Development</h3>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias,
-            perspiciatis.
-          </p>
+    <div>
+      <div class="container">
+        <section class="services-preview">
+          <h2>What We Offer</h2>
+          <div class="row">
+            <div class="col-12 col-sm-6 mb-4">
+              <div class="card card-1 card-one h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Software as a Service (SaaS)</h5>
+                  <p class="card-text">
+                    Next-gen SaaS platform to streamline operations, boost
+                    productivity, and drive scalable growth for startups and
+                    enterprises alike.
+                  </p>
+                  <button class="see-more" data-modal="modal1">➟ Read More</button>
+                </div>
+              </div>
+            </div>
+            
+           
+
+            <div class="col-12 col-sm-6 mb-4">
+              <div class="card card-2 card-two h-100">
+                <div class="card-body">
+                  <h5 class="card-title">GenAI and AI Solutions</h5>
+                  <p class="card-text">
+                    Boost efficiency, automate workflows, and enhance
+                    decision-making with our AI platform for smarter, scalable
+                    business growth.
+                  </p>
+                  <button class="see-more" data-modal="modal2">➟ Read More</button>                </div>
+              </div>
+            </div>
+          
+          </div>
+
+
+          <div class="row">
+            <div class="col-12 col-sm-6 mb-4">
+              <div class="card card-3 card-two h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Cloud Solutions</h5>
+                  <p class="card-text">
+                    Unlock agility, cut costs, and drive innovation with our
+                    secure, scalable cloud platform built for modern business
+                    needs.
+                  </p>
+                  <button class="see-more" data-modal="modal3">➟ Read More</button>                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 mb-4">
+              <div class="card card-4 card-one h-100">
+                <div class="card-body">
+                  <h5 class="card-title">Integration Services</h5>
+                  <p class="card-text">
+                    Streamline operations and boost productivity with our
+                    integration platform that unifies systems, automates
+                    workflows, and simplifies data management.
+                  </p>
+                  <button class="see-more" data-modal="modal4">➟ Read More</button>                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12 col-sm-6 mb-4">
+              <div class="card card-5 card-one h-100">
+                <div class="card-body">
+                  <h5 class="card-title">SIP (Session Initiation Protocol)</h5>
+                  <p class="card-text">
+                    Enhance communication with our cloud SIP solution—unifying
+                    voice, video, and messaging for scalable, flexible, and
+                    cost-effective connectivity.
+                  </p>
+                  <button class="see-more" data-modal="modal5">➟ Read More</button>                </div>
+              </div>
+            </div>
+
+            <div class="col-12 col-sm-6 mb-4">
+              <div class="card card-6 card-two h-100">
+                <div class="card-body">
+                  <h5 class="card-title">
+                    CRM (Customer Relationship Management)
+                  </h5>
+                  <p class="card-text">
+                    Boost sales, service, and marketing with our CRM—offering
+                    360° customer insights, automation, and seamless,
+                    personalized interactions.
+                  </p>
+                  <button class="see-more" data-modal="modal6">➟ Read More</button>                </div>
+              </div>
+            </div>
+          </div>
+          <div id="modal1" class="modal">
+            <div class="modal-content"><span class="close">&times;</span><p>A next-generation SaaS platform designed to simplify your operations, accelerate business growth, and foster innovation. Whether you’re a startup or an enterprise, our intelligent solutions enable you to streamline processes, enhance productivity, and drive better business outcomes every day. With a focus on scalability and ease of use, it’s the ideal platform to help you unlock new efficiencies and stay ahead in a competitive market.
+            </p></div>
+          </div>
+          
+          <div id="modal2" class="modal">
+            <div class="modal-content"><span class="close">&times;</span><p>Leverage the power of artificial intelligence to automate workflows, gain deeper insights, and make smarter decisions at scale. Our AI-powered platform helps teams increase operational efficiency, reduce manual tasks, and drive innovation. Whether you’re analyzing data, optimizing processes, or improving customer experiences, AI solutions enable you to act with greater precision, ultimately enhancing decision-making and accelerating your business growth.
+              </p></div>
+          </div>
+          
+          <div id="modal3" class="modal">
+              <div class="modal-content"><span class="close">&times;</span><p>Maximize the potential of cloud technology to increase agility, reduce costs, and enable scalable innovation. Our cloud-native platform is designed to simplify operations, empower teams, and provide the infrastructure needed to ensure resilience and reliability. With a secure, flexible, and scalable cloud environment, businesses can stay nimble while benefiting from enhanced collaboration and faster time-to-market for new services and products.
+          </p></div>
         </div>
-        <div class="service-card">
-          <img src="images/mobile-dev-icon.jpg" alt="Mobile Development" />
-          <h3>Mobile Development</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio,
-            dolorem.
-          </p>
-        </div>
-        <div class="service-card">
-          <img src="images/cloud-icon.jpg" alt="Cloud Solutions" />
-          <h3>Cloud Solutions</h3>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi,
-            necessitatibus?
-          </p>
+        
+        <div id="modal4" class="modal">
+              <div class="modal-content"><span class="close">&times;</span><p>Seamlessly connect and integrate your applications, services, and data to improve efficiency and reduce manual efforts. Our integration platform provides a unified, streamlined solution that enhances workflow automation and ensures your systems work together smoothly. This allows teams to focus on their core tasks while seamlessly managing data flows, making operations more efficient and increasing overall productivity across your organization.
+              </p></div>
+          </div>
+          
+          <div id="modal5" class="modal">
+            <div class="modal-content"><span class="close">&times;</span><p>Optimize your communication systems with a cloud-based SIP solution that integrates voice, video, and messaging services for seamless connectivity. Whether you’re a large enterprise or a small startup, this platform offers flexibility and scalability to meet your unique communication needs. By simplifying deployment and management, it ensures cost-effective and reliable communication while enabling businesses to scale and adapt quickly to changing market demands.</p></div>
+            </p></div>
+          </div>
+        
+          <div id="modal6" class="modal">
+            <div class="modal-content"><span class="close">&times;</span><p>A comprehensive CRM platform designed to streamline sales, marketing, and customer service processes. By providing a 360-degree view of your customers, the platform helps you build stronger relationships, increase sales efficiency, and deliver exceptional service. With automated workflows, data-driven insights, and seamless integrations, this CRM solution boosts productivity, reduces response times, and empowers your team to make smarter, more personalized customer interactions.
+            </p></div>
+          </div>
+        </section>
+        <section class="benefits-of-us">
+          <h2>Benefits of Us</h2>
+          <div class="benefits-of-us-content">
+            <div class="tabs">
+              <button class="tab active" onclick="switchTab(0)">
+                Innovation-Driven Solutions
+              </button>
+              <button class="tab" onclick="switchTab(1)">
+                Innovate Faster
+              </button>
+              <button class="tab" onclick="switchTab(2)">
+                Scalable & Reliable
+              </button>
+              <button class="tab" onclick="switchTab(3)">
+                Seamless Integration
+              </button>
+              <button class="tab" onclick="switchTab(4)">
+                Customer-Centric Approach
+              </button>
+            </div>
+            <div class="tab-content">
+              <p id="tab-text">
+                Unlock the future of streamlined service through InnoBoon’s
+                cutting-edge AI bot factory. Experience unparalleled speed and
+                efficiency as our advanced technology transforms your business
+                operations.
+              </p>
+            </div>
+          </div>
+        </section>
+        <div class="stats-container">
+          <div class="stat-box">
+            <div class="icon-circle">
+              <div class="icon">
+                <img src="./software-developer.png" alt="software developer" />
+              </div>
+            </div>
+            <div class="number">35 +</div>
+            <div class="label">Software developers</div>
+          </div>
+          <div class="stat-box">
+            <div class="icon-circle">
+              <div class="icon">
+                <img src="./end-user.png" alt="end user" />
+              </div>
+            </div>
+            <div class="number">100 +</div>
+            <div class="label">End users</div>
+          </div>
+          <div class="stat-box">
+            <div class="icon-circle">
+              <div class="icon"><img src="./clients.png" alt="clients" /></div>
+            </div>
+            <div class="number">25 +</div>
+            <div class="label">Clients</div>
+          </div>
+          <div class="stat-box">
+            <div class="icon-circle">
+              <div class="icon">
+                <img src="./application-built.png" alt="Applications built" />
+              </div>
+            </div>
+            <div class="number">30 +</div>
+            <div class="label">Applications built</div>
+          </div>
         </div>
       </div>
-      <a href="services.html" class="see-more">View All Services →</a>
-    </section>
-
-    <!-- Projects Preview -->
-    <section class="projects-preview">
-      <h2>Recent Projects</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <img src="images/project1.jpg" alt="Project 1" />
-          <h3>Project 1</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      <section class="contact-section">
+        <div class="contact-content">
+          <div>
+            <h2 class="email">info@codesparkit.com</h2>
+            <p class="subtitle">Want to work with us? Let’s talk</p>
+          </div>
+          <a href="./contact.html" class="contact-btn"> CONTACT US → </a>
         </div>
-        <div class="project-card">
-          <img src="images/project2.jpg" alt="Project 2" />
-          <h3>Project 2</h3>
-          <p>Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
-        </div>
+      </section>   
       </div>
+      <div >
+        <h3 class="carousel">Trusted by Awesome Clients</h3>
+      <div class="carousel-container">
+        <div class="carousel-track" id="carousel-track">
+          <div class="carousel-slide"><img class="jlr" src="./company-logo/JLR.jpg" alt="JLR"></div>
+          <div class="carousel-slide"><img class="tcs"src="./company-logo/TCS.png" alt="TCS"></div>
+          <div class="carousel-slide"><img class="aviva"src="./company-logo/Aviva_logo_PNG_(1).png" alt="Aviva"></div>
+          <div class="carousel-slide"><img class="clydesdale"src="./company-logo/Clydesdale Bank.png" alt="Clydesdale"></div>
+          <div class="carousel-slide"><img class="yorkshirehousing"src="./company-logo/Yorkshire housing.png" alt="Yorkshire Housing"></div>
+          <div class="carousel-slide"><img class="Lloydsbankingroup"src="./company-logo/Lloyds banking group.jpg" alt="Lloyds"></div>
+          <div class="carousel-slide"><img class="checkatrade"src="./company-logo/Checktrade.png" alt="Checkatrade"></div>
+          <div class="carousel-slide"><img class="studentloanscompany"src="./company-logo/Student Loans Company.jpg" alt="Student Loans Company"></div>
+          <div class="carousel-slide"><img class="rathbones"src="./company-logo/Rathbones.jpg" alt="Rathbones"></div>
+          <div class="carousel-slide"><img class="atossyntel"src="./company-logo/Atos Syntel.webp" alt="Atos Syntel"></div>
+          <div class="carousel-slide"><img class="lv"src="./company-logo/lv-logo.png" alt="LV Insurance"></div>
+        </div>
+        <div class="dots" id="dots"></div>
+      </div>
+    </div>
 
-      <a href="projects.html" class="see-more">View All Projects →</a>
-    </section>
+    <br /><br /><br />
 
     <footer class="footer">
       <div class="footer-content">
@@ -163,13 +304,13 @@
         </div>
         <div class="footer-section">
           <h3>Contact Info</h3>
-          <p>Email: bluemind@gmail.com</p>
-          <p>Phone: +91 9876543210</p>
-          <p>Address: 123,Salem</p>
+          <h2>Our address:</h2>
+          <p>3, The Quadrant, Warwick Road, Coventry, CV1 2DY</p>
+          <p>Email: info@codesparkit.com</p>
         </div>
       </div>
       <div class="footer-bottom">
-        <p>&copy; 2025 Blue Mind. All rights reserved.</p>
+        <p>&copy; 2025 CodeSpark it . All rights reserved.</p>
       </div>
     </footer>
     <script
@@ -177,5 +318,6 @@
       integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
       crossorigin="anonymous"
     ></script>
+    <script src="./script.js" defer></script>
   </body>
 </html>
