@@ -15,36 +15,69 @@ function switchTab(index) {
   tabText.textContent = tabContents[index];
 }
 
+//navbar
+
+//logos
 const track = document.getElementById("carousel-track");
-const slides = document.querySelectorAll(".carousel-slide");
 const dotsContainer = document.getElementById("dots");
+const slides = document.querySelectorAll(".carousel-slide");
+const slidesPerView = 4;
+const slideCount = slides.length;
 
-const logosPerView = 4;
-const totalSlides = slides.length;
-const totalPages = Math.ceil(totalSlides / logosPerView);
-let currentPage = 0;
+for (let i = 0; i < slidesPerView; i++) {
+  const clone = slides[i].cloneNode(true);
+  track.appendChild(clone);
+}
 
-for (let i = 0; i < totalPages; i++) {
-  const dot = document.createElement("span");
-  dot.classList.add("dot");
+let currentIndex = 0;
+const totalDots = slideCount;
+let isTransitioning = false;
+
+for (let i = 0; i < totalDots; i++) {
+  const dot = document.createElement("button");
   if (i === 0) dot.classList.add("active");
   dot.addEventListener("click", () => moveToSlide(i));
   dotsContainer.appendChild(dot);
 }
 
-function moveToSlide(pageIndex) {
-  const slideWidth = slides[0].offsetWidth;
-  track.style.transform = `translateX(-${
-    pageIndex * slideWidth * logosPerView
-  }px)`;
-
-  document
-    .querySelectorAll(".dot")
-    .forEach((dot) => dot.classList.remove("active"));
-  document.querySelectorAll(".dot")[pageIndex].classList.add("active");
-  currentPage = pageIndex;
+function moveToSlide(index) {
+  if (isTransitioning) return;
+  currentIndex = index;
+  track.style.transition = "transform 0.5s ease";
+  track.style.transform = `translateX(-${25 * index}%)`;
+  updateDots();
 }
 
+function updateDots() {
+  const dots = dotsContainer.querySelectorAll("button");
+  dots.forEach((dot, i) => {
+    dot.classList.toggle("active", i === currentIndex % totalDots);
+  });
+}
+
+setInterval(() => {
+  if (isTransitioning) return;
+
+  currentIndex++;
+  track.style.transition = "transform 0.5s ease";
+  track.style.transform = `translateX(-${25 * currentIndex}%)`;
+  updateDots();
+
+  // If we reach the end, reset seamlessly
+  if (currentIndex === slideCount) {
+    isTransitioning = true;
+    setTimeout(() => {
+      track.style.transition = "none";
+      track.style.transform = `translateX(0%)`;
+      currentIndex = 0;
+      updateDots();
+      isTransitioning = false;
+    }, 600); // wait until after the transition
+  }
+}, 2000);
+
+// cards
+// Open modal on button click
 document.querySelectorAll(".see-more").forEach((button) => {
   button.addEventListener("click", (e) => {
     e.preventDefault();
@@ -53,14 +86,26 @@ document.querySelectorAll(".see-more").forEach((button) => {
   });
 });
 
-document.querySelectorAll(".modal").forEach((modal) => {
-  modal.querySelector(".close").addEventListener("click", () => {
-    modal.style.display = "none";
+// Close modal on 'x' click
+document.querySelectorAll(".modal .close").forEach((closeBtn) => {
+  closeBtn.addEventListener("click", () => {
+    closeBtn.closest(".modal").style.display = "none";
   });
+});
 
-  window.addEventListener("click", (event) => {
+// Close modal when clicking outside
+window.addEventListener("click", (event) => {
+  document.querySelectorAll(".modal").forEach((modal) => {
     if (event.target === modal) {
       modal.style.display = "none";
     }
   });
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    document.querySelectorAll(".modal").forEach((modal) => {
+      modal.style.display = "none";
+    });
+  }
 });
